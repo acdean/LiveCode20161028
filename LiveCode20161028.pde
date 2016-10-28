@@ -54,6 +54,7 @@ class Bauble {
     ry += dy;
     rz += dz;
     scale(50);
+    strokeWeight(.2);
     rotateX(rx);
     rotateY(ry);
     rotateZ(rz);
