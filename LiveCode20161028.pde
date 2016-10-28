@@ -18,6 +18,7 @@ void draw() {
   colorMode(HSB, 360, 100, 100);
   background(frameCount % 360, 100, 100);
   colorMode(RGB);
+  noFill();
   for (Bauble b : baubles) {
     b.draw();
   }
