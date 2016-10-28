@@ -16,7 +16,7 @@ void draw() {
   colorMode(RGB);
   noFill();
   scale(50);
-  rotateX(radians(frameCount / 87.0));
+  rotateX(radians(frameCount / 8.0));
   rotateY(radians(frameCount / 51.0));
   stroke(255, 0, 0);
   box(1, 3, 5);
