@@ -24,12 +24,29 @@ void draw() {
 }
 
 class Bauble {
+  float rx, dx, ry, dy, rz, dz;
+
+  Bauble() {
+    dx = random(-.02, .02);
+    dy = random(-.02, .02);
+    dz = random(-.02, .02);
+  }
+
   void draw() {
+    pushMatrix();
+    rx += dx;
+    ry += dy;
+    rz += dz;
+    scale(5);
+    rotateX(rx);
+    rotateY(ry);
+    rotateZ(rz);
     stroke(255, 0, 0);
     box(1, 3, 5);
     stroke(0, 255, 0);
     box(3, 5, 1);
     stroke(0, 0, 255);
     box(5, 1, 3);
+    popMatrix();
   }
 }
