@@ -37,7 +37,7 @@ class Bauble {
     rx += dx;
     ry += dy;
     rz += dz;
-    scale(5);
+    scale(50);
     rotateX(rx);
     rotateY(ry);
     rotateZ(rz);
