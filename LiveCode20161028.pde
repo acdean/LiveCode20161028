@@ -32,9 +32,9 @@ class Bauble {
     dx = random(-.02, .02);
     dy = random(-.02, .02);
     dz = random(-.02, .02);
-    x = random(width);
-    y = random(height);
-    z = random(100);
+    x = random(-width, width);
+    y = random(-height, height);
+    z = random(-100, 100);
   }
 
   void draw() {
