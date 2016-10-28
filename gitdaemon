@@ -1,3 +1,9 @@
+# initialise local git if not there
+if [ ! -f ".git" ]; then
+	git init .
+fi
+
+# continually check and add new files
 while (true)
 do
 	DATE=`date +"%Y%m%d_%H%M%S"`
