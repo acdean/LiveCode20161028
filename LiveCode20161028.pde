@@ -13,4 +13,11 @@ void setup() {
 void draw() {
   colorMode(HSB, 360, 100, 100);
   background(frameCount % 360, 100, 100);
+  noFill();
+  stroke(255, 0, 0);
+  box(1, 3, 5);
+  stroke(0, 255, 0);
+  box(3, 5, 1);
+  stroke(0, 0, 255);
+  box(5, 1, 3);
 }
