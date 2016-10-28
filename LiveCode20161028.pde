@@ -24,16 +24,21 @@ void draw() {
 }
 
 class Bauble {
-  float rx, dx, ry, dy, rz, dz;
+  float rx, dx, ry, dy, rz, dz; // rotation
+  float x, y, z; //pos
 
   Bauble() {
     dx = random(-.02, .02);
     dy = random(-.02, .02);
     dz = random(-.02, .02);
+    x = random(width);
+    y = random(height);
+    z = random(100);
   }
 
   void draw() {
     pushMatrix();
+    translate(x, y, z);
     rx += dx;
     ry += dy;
     rz += dz;
