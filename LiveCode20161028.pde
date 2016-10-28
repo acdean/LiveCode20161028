@@ -45,6 +45,10 @@ void draw() {
   }
 }
 
+void keyPressed() {
+  saveFrame("frame####.png");
+}
+
 class Bauble {
   float rx, dx, ry, dy, rz, dz; // rotation
   float x, y, z; //pos
