@@ -44,7 +44,7 @@ class Bauble {
     dz = random(-.02, .02);
     x = random(-width, width);
     y = random(-height, height);
-    z = random(-100, 100);
+    z = random(-500, 500);
   }
 
   void draw() {
