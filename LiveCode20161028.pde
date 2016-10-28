@@ -3,6 +3,9 @@ import peasy.org.apache.commons.math.*;
 import peasy.org.apache.commons.math.geometry.*;
 import peasy.test.*;
 
+import processing.opengl.*;
+import com.jogamp.opengl.*;  // new jogl - 3.0b7
+
 PeasyCam cam;
 ArrayList<Bauble> baubles = new ArrayList<Bauble>();
 
@@ -16,6 +19,12 @@ void setup() {
 
 void draw() {
   colorMode(HSB, 360, 100, 100);
+  // PJOGL 2.2.1, 30b7
+  GL gl = ((PJOGL)beginPGL()).gl.getGL();
+  // additive blending
+  gl.glEnable(GL.GL_BLEND);
+  gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE);
+  gl.glDisable(GL.GL_DEPTH_TEST);
   lights();
   background(frameCount % 360, 25, 25);
   colorMode(RGB);
