@@ -16,6 +16,7 @@ void setup() {
 
 void draw() {
   colorMode(HSB, 360, 100, 100);
+  lights();
   background(frameCount % 360, 25, 25);
   colorMode(RGB);
   noFill();
