@@ -7,9 +7,10 @@ PeasyCam cam;
 ArrayList<Bauble> baubles = new ArrayList<Bauble>();
 float rx, ry, rz;
 float dx, dy, dz;
+boolean video = false;
 
 void setup() {
-  size(1000, 600, OPENGL);
+  size(640, 360, OPENGL);
   cam = new PeasyCam(this, 500);
   for (int f = 0 ; f < 50 ; f++) {
     baubles.add(new Bauble());
@@ -39,6 +40,12 @@ void draw() {
   noFill();
   for (Bauble b : baubles) {
     b.draw();
+  }
+  if (video) {
+    saveFrame("frame#####.png");
+    if (frameCount > 500) {
+      exit();
+    }
   }
 }
 
